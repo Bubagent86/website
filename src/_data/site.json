@@ -1,0 +1,9 @@
+{
+  "title": "Gabe",
+  "description": "Personal website of Gabe.",
+  "nav": [
+    { "text": "Work", "url": "/work/" },
+    { "text": "About", "url": "/about/" },
+    { "text": "News", "url": "/news/" }
+  ]
+}

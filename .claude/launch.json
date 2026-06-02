@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "eleventy",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeArgs": [
+        "node_modules/@11ty/eleventy/cmd.cjs",
+        "--serve",
+        "--port",
+        "8080"
+      ],
+      "port": 8080
+    }
+  ]
+}
