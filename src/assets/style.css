@@ -2,7 +2,7 @@
   --bg: #ffffff;
   --fg: #1a1a1a;
   --muted: #5a5a5a;
-  --accent: #2563eb;
+  --accent: #de73ce;
   --border: #e5e5e5;
   --card: #fafafa;
   --maxw: 44rem;
@@ -60,14 +60,19 @@ a:hover {
   gap: 1rem;
   flex-wrap: wrap;
   padding-block: 1.25rem;
-  border-bottom: 1px solid var(--border);
+}
+
+/* Full-width colored banner behind the header. The bar spans the viewport;
+   the inner .site-header keeps its content in the centered column. */
+.site-header-bar {
+  background: var(--accent);
 }
 
 .brand {
   font-weight: 700;
   font-size: 1.25rem;
   text-decoration: none;
-  color: var(--fg);
+  color: #fff;
 }
 
 .site-header nav ul {
@@ -80,12 +85,12 @@ a:hover {
 
 .site-header nav a {
   text-decoration: none;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .site-header nav a:hover,
 .site-header nav a[aria-current="page"] {
-  color: var(--fg);
+  color: #fff;
 }
 
 .site-header nav a[aria-current="page"] {
@@ -104,13 +109,23 @@ h1 {
   margin-top: 0;
 }
 
+/* First paragraph after a page title reads as an intro/lede. */
+main h1 + p,
 .lede {
   font-size: 1.15rem;
   color: var(--muted);
 }
 
-.hero {
-  padding-block: 1.5rem;
+/* Section + sub-section headings in Markdown content. */
+main h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+main h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.25rem;
 }
 
 .button {
@@ -127,33 +142,108 @@ h1 {
   opacity: 0.9;
 }
 
-/* Work page */
-.work-section {
-  margin-block: 2.5rem;
+/* Screenshots */
+main picture {
+  display: block;
 }
 
-.work-section h2 {
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.35rem;
-}
-
-.card-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 1rem;
-}
-
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
+/* Layout A: full-width image, text written below in Markdown. */
+.shot-img {
+  display: block;
+  width: 100%;
+  height: auto;
   border-radius: 0.6rem;
-  padding: 1rem 1.25rem;
+  margin: 0.5rem 0 0.25rem;
 }
 
-.card h3 {
-  margin-top: 0;
+/* Layout B: full-width image with the title overlaid on it. */
+.shot-overlay {
+  position: relative;
+  margin: 1.5rem 0 0.5rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.shot-overlay img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.shot-overlay figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3rem 1.25rem 1rem;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0));
+}
+
+.shot-overlay .shot-title {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Role + collaborators, overlaid under the title. Casing is preserved as
+   written (no forced uppercase) so deliberately lowercase credits stay so. */
+.shot-overlay .shot-role {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Game entry: image+overlay (title → role) → tagline lead → body. */
+.game {
+  margin-block: 3rem;
+}
+
+.game .shot-overlay {
+  margin-bottom: 0.75rem;
+}
+
+.game-body {
+  margin-top: 0.5rem;
+}
+
+/* Call-to-action button on a game's detail page. */
+.game-cta {
+  margin-top: 1.5rem;
+}
+
+/* First paragraph of the body reads as a tagline/lead. */
+.game-body > p:first-child {
+  font-size: 1.15rem;
+  color: var(--fg);
+  margin-top: 0.25rem;
+}
+
+/* Remaining paragraphs are the quieter reflection text. */
+.game-body > p:not(:first-child) {
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+/* When the screenshot links somewhere, signal it's clickable. */
+.shot-overlay a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.shot-overlay a:hover img,
+.shot-overlay a:focus-visible img {
+  transform: scale(1.03);
+}
+
+.shot-overlay a:hover figcaption,
+.shot-overlay a:focus-visible figcaption {
+  text-decoration: underline;
 }
 
 /* News list */

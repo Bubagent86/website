@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+<article class="game game-detail">
+  {% gameOverlay screenshot, alt, title + " (" + year + ")", false, role %}
+  <div class="game-body">
+    {{ content | safe }}
+  </div>
+  {% if storeUrl %}
+    <p class="game-cta">
+      <a class="button" href="{{ storeUrl }}" target="_blank" rel="noopener"
+        >{{ storeLabel or "View the game" }} →</a
+      >
+    </p>
+  {% endif %}
+</article>
+<p class="post-back"><a href="{{ '/' | url }}">← Back to work</a></p>
