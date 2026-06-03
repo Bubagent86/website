@@ -88,7 +88,7 @@ a:hover {
   display: block;
   height: 96px;
   width: auto;
-  filter: brightness(0d);
+  filter: brightness(0);
 }
 
 .site-header nav ul {
