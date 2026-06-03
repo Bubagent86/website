@@ -1,7 +1,7 @@
 ---
 title: DESPELOTE
 year: 2025
-role: Producer · Therapist · Level designer · Soccer 99 · with Julián cordero, Sebastian Valbuena, Ian berman
+role: Producer · Therapist · Level designer · Soccer 99 · with Julián Cordero, Sebastian Valbuena, Ian Berman
 screenshot: src/screenshots/despelote-screen.png
 alt: Despelote screenshot
 storeUrl: https://store.steampowered.com/app/2367820/despelote/
