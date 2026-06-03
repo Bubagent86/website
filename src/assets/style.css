@@ -67,6 +67,20 @@ a:hover {
   padding-bottom: 0.35rem;
 }
 
+/* On narrow screens (phones) the logo and tabs stack — center them instead
+   of leaving them left-aligned. */
+@media (max-width: 32rem) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .site-header nav {
+    padding-bottom: 0;
+  }
+}
+
 /* Full-width colored banner behind the header. The bar spans the viewport;
    the inner .site-header keeps its content in the centered column. */
 .site-header-bar {
