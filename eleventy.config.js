@@ -107,6 +107,28 @@ export default function (eleventyConfig) {
     }
   );
 
+  // Image beside text. The photo sits in a column to the left and the body
+  // Markdown flows to its right; on narrow screens they stack. Usage:
+  //   {% sideBySide "src/screenshots/gabe.jpg", "A photo of Gabe" %}
+  //   I'm an indie game developer based in Brooklyn…
+  //   {% endsideBySide %}
+  eleventyConfig.addPairedShortcode(
+    "sideBySide",
+    async function (content, src, alt) {
+      if (!alt) throw new Error(`Missing alt text for image: ${src}`);
+      const metadata = await optimize(src);
+      const picture = Image.generateHTML(metadata, {
+        alt,
+        sizes: "(max-width: 34rem) 100vw, 260px",
+        loading: "lazy",
+        decoding: "async",
+        class: "media-img",
+      });
+      const bodyHtml = md.render(content.trim());
+      return `<div class="media"><div class="media-figure">${picture}</div><div class="media-body">${bodyHtml}</div></div>`;
+    }
+  );
+
   return {
     pathPrefix: PATH_PREFIX,
     markdownTemplateEngine: "njk",

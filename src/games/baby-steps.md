@@ -15,8 +15,6 @@ I worked on this full time between 2019 and 2025. I did a lot of kinds of work f
 
 
 
-[Watch me and Bennett React to a Speedrun of it](https://www.youtube.com/watch?v=gQx_S_iu-g8&list=LL&index=4&t=7s)
-
 [Me and Bennett on TSLOG](https://eggplant.show/152-walking-over-it-with-gabe-cuzzillo-and-bennett-foddy-baby-steps)
 
 [Bullet Points did an Issue on it](https://bulletpointsmonthly.com/issue/baby-steps)
@@ -26,3 +24,5 @@ I worked on this full time between 2019 and 2025. I did a lot of kinds of work f
 [It was named one of the top 10 games of the year by The New York Times](https://www.nytimes.com/2025/12/09/arts/best-video-games-2025.html)
 
 [An article about it in a buddhist magazine by the head writer of The Onion](https://tricycle.org/article/baby-steps-review/?utm_campaign=02655378&utm_source=p3s4h3r3s)
+
+[Watch me and Bennett React to a Speedrun of it](https://www.youtube.com/watch?v=gQx_S_iu-g8&list=LL&index=4&t=7s)

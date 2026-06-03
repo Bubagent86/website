@@ -147,6 +147,48 @@ main picture {
   display: block;
 }
 
+/* Image beside text (e.g. the About page). Photo column left, text right;
+   stacks vertically on narrow screens. */
+.media {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin: 1.5rem 0;
+}
+
+.media-figure {
+  flex: 0 0 auto;
+  width: 260px;
+  max-width: 40%;
+}
+
+.media-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.6rem;
+}
+
+/* Don't let the body text push the row taller with stray top/bottom margins. */
+.media-body > :first-child {
+  margin-top: 0;
+}
+
+.media-body > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 34rem) {
+  .media {
+    flex-direction: column;
+  }
+
+  .media-figure {
+    width: 70%;
+    max-width: 260px;
+  }
+}
+
 /* Layout A: full-width image, text written below in Markdown. */
 .shot-img {
   display: block;
