@@ -24,3 +24,5 @@ I worked on this full time between 2019 and 2025. I did a lot of kinds of work f
 [A nice Ars Technica review](https://arstechnica.com/gaming/2025/09/baby-steps-is-the-most-gloriously-frustrating-game-ive-ever-struggled-through/)
 
 [It was named one of the top 10 games of the year by The New York Times](https://www.nytimes.com/2025/12/09/arts/best-video-games-2025.html)
+
+[An article about it in a buddhist magazine by the head writer of The Onion](https://tricycle.org/article/baby-steps-review/?utm_campaign=02655378&utm_source=p3s4h3r3s)

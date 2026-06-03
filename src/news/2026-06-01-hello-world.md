@@ -1,8 +1,6 @@
 ---
-title: Hello, world
+title: I made a website
 date: 2026-06-01
 ---
 
-This is the first post on my new site. To add another, drop a Markdown file
-into `src/news/` with a `title` and `date` in the front matter — it'll show up
-on the News page automatically.
+I hope you like my website. If I ever have any news it might go here in this list of news.
