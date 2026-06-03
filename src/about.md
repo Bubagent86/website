@@ -7,3 +7,7 @@ I'm an indie game developer based in Brooklyn NY. I've worked on some works that
 
 You can contact me at my name at gmail.
 {% endsideBySide %}
+
+I took this picture of a window.
+
+{% screenshot "src/screenshots/window.jpg", "window" %}
