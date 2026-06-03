@@ -1,6 +1,14 @@
 <div class="site-header-bar">
   <header class="site-header container">
-    <a class="brand" href="{{ '/' | url }}">{{ site.title }}</a>
+    <a class="brand" href="{{ '/' | url }}">
+      <img
+        class="brand-logo"
+        src="{{ '/assets/card.png' | url }}"
+        alt="{{ site.title }} — game dev"
+        width="1050"
+        height="510"
+      />
+    </a>
     <nav aria-label="Main navigation">
       <ul>
         {% for item in site.nav %}

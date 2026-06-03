@@ -55,11 +55,16 @@ a:hover {
 /* Header / nav */
 .site-header {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
   padding-block: 1.25rem;
+}
+
+/* Drop the nav tabs to the bottom so they line up with the logo's baseline. */
+.site-header nav {
+  padding-bottom: 0.35rem;
 }
 
 /* Full-width colored banner behind the header. The bar spans the viewport;
@@ -73,6 +78,17 @@ a:hover {
   font-size: 1.25rem;
   text-decoration: none;
   color: #fff;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Hand-drawn logo standing in for the brand text. White-backed art, so a
+   little rounding makes it read as an intentional panel on the colored bar. */
+.brand-logo {
+  display: block;
+  height: 96px;
+  width: auto;
+  border-radius: 0.5rem;
 }
 
 .site-header nav ul {
