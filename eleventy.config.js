@@ -4,10 +4,11 @@ import markdownIt from "markdown-it";
 const md = markdownIt({ html: true, linkify: true, typographer: true });
 
 // Keep the path prefix in one place: it feeds both Eleventy's pathPrefix
-// and the URLs the image plugin writes. Repo is Bubagent86/website, so the
-// site is served from /website/. If you move to a user site
-// (bubagent86.github.io) or a custom domain served at the root, set this to "/".
-const PATH_PREFIX = "/website/";
+// and the URLs the image plugin writes. The site is served from the custom
+// domain gabecuzzillo.com at the root, so this is "/". (If you ever serve it
+// from the project URL bubagent86.github.io/website/ instead, set it back to
+// "/website/" so the asset links resolve.)
+const PATH_PREFIX = "/";
 
 async function optimize(src) {
   return Image(src, {
