@@ -11,4 +11,4 @@ order: 4
 
 A new version of foiled for the new arcade.
 
-This is Charles' baby. It was
+This is Charles' baby. It was very fun adapting the game to work as an arcade cabinet. Some day we will finish it.
