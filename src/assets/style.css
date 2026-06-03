@@ -1,8 +1,8 @@
 :root {
-  --bg: #ffff;
+  --bg: #fff;
   --fg: #1a1a1a;
   --muted: #5a5a5a;
-  --accent: #cc45c8;
+  --accent: #ffbffd;
   --border: #e5e5e5;
   --card: #fafafa;
   --maxw: 44rem;
@@ -13,7 +13,7 @@
     --bg: #14161a;
     --fg: #e8e8e8;
     --muted: #a0a0a0;
-    --accent: #cc45c8;
+    --accent: #ffbffd;
     --border: #2a2d34;
     --card: #1c1f25;
   }
@@ -82,13 +82,13 @@ a:hover {
   align-items: center;
 }
 
-/* Hand-drawn logo standing in for the brand text. White-backed art, so a
-   little rounding makes it read as an intentional panel on the colored bar. */
+/* Hand-drawn logo standing in for the brand text. Transparent white line art;
+   brightness(0) recolors the strokes to solid black. */
 .brand-logo {
   display: block;
   height: 96px;
   width: auto;
-  border-radius: 0.5rem;
+  filter: brightness(0d);
 }
 
 .site-header nav ul {
@@ -101,15 +101,15 @@ a:hover {
 
 .site-header nav a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.75);
+  color: #1a1a1a;
 }
 
-.site-header nav a:hover,
-.site-header nav a[aria-current="page"] {
-  color: #fff;
+.site-header nav a:hover {
+  opacity: 0.6;
 }
 
 .site-header nav a[aria-current="page"] {
+  color: #000;
   font-weight: 600;
 }
 
