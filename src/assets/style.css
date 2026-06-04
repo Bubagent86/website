@@ -151,6 +151,8 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  /* Safety net: never let a stray wide element create horizontal scroll/zoom. */
+  overflow-x: hidden;
 }
 
 body {
@@ -510,17 +512,20 @@ main picture {
   border-top: 1px solid var(--border);
 }
 
-/* Accessibility: skip link */
+/* Accessibility: skip link. Hidden off the TOP edge (not off to the left with
+   left:-9999px, which can make mobile browsers count it into the page width and
+   render the page slightly zoomed). Slides in when focused. */
 .skip-link {
   position: absolute;
-  left: -9999px;
-  top: 0;
+  top: -3rem;
+  left: 0;
   background: var(--accent);
   color: #fff;
   padding: 0.5rem 1rem;
   z-index: 10;
+  transition: top 0.15s ease;
 }
 
 .skip-link:focus {
-  left: 0;
+  top: 0;
 }
