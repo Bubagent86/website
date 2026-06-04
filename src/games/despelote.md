@@ -11,7 +11,9 @@ order: 2
 
 A game about wanting to remember being a kid during ecuador's first qualifying run to the world cup in 2001.
 
-I did a lot of disparate stuff for this game between 2020 and 2025. I started out just advising julián and become more and more directly involved over the years. I'm straight forwardly proud of it in a way I could never be with something I was the primary author of.
+I did a lot of disparate stuff for this game between 2020 and 2025. I started out just advising julián and became more and more directly involved over the years. I'm straight forwardly proud of it in a way I could never be with something I was the primary author of.
+
+Here's some of the lovely writing about the game:
 
 [digital trends: miraculous slice-of-life soccer game pulls a hat trick](https://www.digitaltrends.com/gaming/despelote-review-miraculous-slice-of-life-soccer-game-pulls-a-hat-trick/) 
 
