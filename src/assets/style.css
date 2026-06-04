@@ -493,10 +493,21 @@ main picture {
 
 /* Footer */
 .site-footer {
-  border-top: 1px solid var(--border);
+  position: relative;
   padding-block: 1.5rem;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+/* Top divider inset to the content column (matching the section underlines)
+   instead of spanning the full padded container. */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.25rem;
+  right: 1.25rem;
+  border-top: 1px solid var(--border);
 }
 
 /* Accessibility: skip link */
