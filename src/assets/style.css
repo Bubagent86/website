@@ -117,33 +117,25 @@
 }
 
 :root {
-    --bg: #14161a;
-    --fg: #e8e8e8;
-    --muted: #a0a0a0;
-    --accent: #ffbffd;
---link: #bb1c6e;
-    --border: #2a2d34;
-    --card: #1c1f25;
-  /*--bg: #fff;
-  --fg: #1a1a1a;
-  --muted: #5a5a5a;
+  --bg: #14161a;
+  --fg: #e8e8e8;
+  --muted: #a0a0a0;
   --accent: #ffbffd;
-  --link: #bb1c6e; /* darker pink for links/buttons so they read on white */
+  --link: #bb1c6e;
   --border: #e5e5e5;
   --card: #fafafa;
-  --maxw: 44rem;*/
+  /* 46.5rem = ~44rem of content after the 2x1.25rem side padding is subtracted
+     (box-sizing: border-box), keeping the column the same width as before. */
+  --maxw: 46.5rem;
 }
 
-/*@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #14161a;
-    --fg: #e8e8e8;
-    --muted: #a0a0a0;
-    --accent: #ffbffd;
-    --border: #2a2d34;
-    --card: #1c1f25;
-  }*/
-}
+/*
+  Light theme palette - paste into :root above to switch:
+    --bg: #fff; --fg: #1a1a1a; --muted: #5a5a5a;
+    --accent: #ffbffd; --link: #bb1c6e;
+    --border: #e5e5e5; --card: #fafafa;
+  Dark border/card values were: --border: #2a2d34; --card: #1c1f25;
+*/
 
 * {
   box-sizing: border-box;
