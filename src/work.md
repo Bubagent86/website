@@ -1,6 +1,5 @@
 ---
 layout: base.njk
-title: Work
 permalink: "/"
 ---
 
