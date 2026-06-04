@@ -1,14 +1,140 @@
+/* Custom display font: Novecento Sans Wide. Light for body, DemiBold for
+   headings/titles. One file per weight. */
+@font-face {
+  font-family: "Novecento Sans Wide";
+  src: url("/assets/fonts/Novecentosanswide-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Novecento Sans Wide";
+  src: url("/assets/fonts/Novecentosanswide-DemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Newsreader: the serif body face that pairs with Novecento headings. */
+@font-face {
+  font-family: "Newsreader";
+  src: url("/assets/fonts/Newsreader-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("/assets/fonts/Newsreader-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("/assets/fonts/Newsreader-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Work Sans: alternate body face to compare against Newsreader. */
+@font-face {
+  font-family: "Work Sans";
+  src: url("/assets/fonts/WorkSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("/assets/fonts/WorkSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("/assets/fonts/WorkSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat: alternate geometric-sans body face to compare. */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Roboto: alternate body face to compare. */
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --bg: #fff;
+    --bg: #14161a;
+    --fg: #e8e8e8;
+    --muted: #a0a0a0;
+    --accent: #ffbffd;
+--link: #bb1c6e;
+    --border: #2a2d34;
+    --card: #1c1f25;
+  /*--bg: #fff;
   --fg: #1a1a1a;
   --muted: #5a5a5a;
   --accent: #ffbffd;
+  --link: #bb1c6e; /* darker pink for links/buttons so they read on white */
   --border: #e5e5e5;
   --card: #fafafa;
-  --maxw: 44rem;
+  --maxw: 44rem;*/
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   :root {
     --bg: #14161a;
     --fg: #e8e8e8;
@@ -16,7 +142,7 @@
     --accent: #ffbffd;
     --border: #2a2d34;
     --card: #1c1f25;
-  }
+  }*/
 }
 
 * {
@@ -31,8 +157,9 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Helvetica, Arial,
     sans-serif;
+  font-weight: 400;
   line-height: 1.6;
   font-size: 18px;
 }
@@ -45,7 +172,7 @@ body {
 }
 
 a {
-  color: var(--accent);
+  color: var(--link);
 }
 
 a:hover {
@@ -116,6 +243,7 @@ a:hover {
 .site-header nav a {
   text-decoration: none;
   color: #1a1a1a;
+  font-family: "Novecento Sans Wide", system-ui, sans-serif;
 }
 
 .site-header nav a:hover {
@@ -131,6 +259,15 @@ a:hover {
 main {
   padding-block: 2.5rem;
   min-height: 60vh;
+}
+
+/* Headings and game-card titles use Novecento DemiBold; body is Newsreader. */
+h1,
+h2,
+h3,
+.shot-title {
+  font-family: "Novecento Sans Wide", system-ui, sans-serif;
+  font-weight: 600;
 }
 
 h1 {
@@ -150,6 +287,7 @@ main h1 + p,
 main h2 {
   margin-top: 2.5rem;
   padding-bottom: 0.35rem;
+  font-size: 2rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -160,7 +298,7 @@ main h3 {
 
 .button {
   display: inline-block;
-  background: var(--accent);
+  background: var(--link);
   color: #fff;
   text-decoration: none;
   padding: 0.6rem 1.1rem;
@@ -196,7 +334,7 @@ main picture {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.85);
 }
 
 /* Don't let the body text push the row taller with stray top/bottom margins. */
@@ -224,7 +362,7 @@ main picture {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.85);
   margin: 0.5rem 0 0.25rem;
 }
 
@@ -232,8 +370,17 @@ main picture {
 .shot-overlay {
   position: relative;
   margin: 1.5rem 0 0.5rem;
-  border-radius: 0.6rem;
   overflow: hidden;
+}
+
+/* Thin white outline drawn over the image edges (a plain border would be
+   invisible against the white page). Square corners (no soft rounding). */
+.shot-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  pointer-events: none;
 }
 
 .shot-overlay img {
@@ -260,8 +407,8 @@ main picture {
   line-height: 1.2;
 }
 
-/* Role + collaborators, overlaid under the title. Casing is preserved as
-   written (no forced uppercase) so deliberately lowercase credits stay so. */
+/* Role + collaborators, overlaid under the title. Set in Novecento Light to
+   match the title (note: Novecento is caps-only, so this renders uppercase). */
 .shot-overlay .shot-role {
   display: block;
   margin-top: 0.3rem;

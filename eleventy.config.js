@@ -55,6 +55,14 @@ export default function (eleventyConfig) {
       .sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
   );
 
+  // Same workflow for "other work" (talks, videos): each file in src/other/
+  // is its own page (tagged "other"), ordered by `order`.
+  eleventyConfig.addCollection("otherWork", (api) =>
+    api
+      .getFilteredByTag("other")
+      .sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
+  );
+
   eleventyConfig.addFilter("dateReadable", (value) =>
     new Date(value).toLocaleDateString("en-US", {
       year: "numeric",
