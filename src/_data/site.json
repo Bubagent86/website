@@ -1,6 +1,7 @@
 {
   "title": "GABE CUZZILLO",
   "description": "Personal website of Gabe.",
+  "url": "https://gabecuzzillo.com",
   "nav": [
     { "text": "work", "url": "/" },
     { "text": "about", "url": "/about/" },
